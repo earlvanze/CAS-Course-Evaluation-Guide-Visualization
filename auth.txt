@@ -1,0 +1,73 @@
+IPython 1.1.0 -- An enhanced Interactive Python.
+?         -> Introduction and overview of IPython's features.
+%quickref -> Quick reference.
+help      -> Python's own help system.
+object?   -> Details about 'object', use 'object??' for extra details.
+
+
+In [1]: import requests
+
+In [2]: r = requests.get(' '
+
+In [2]: import requests                   r 
+---------------------------------------------------------------------------
+NameError                                 Traceback (most recent call last)
+<ipython-input-2-5321bdd0febc> in <module>()
+----> 1 r
+
+NameError: name 'r' is not defined
+
+In [3]: url='http://www.nyu.edu/cas/ceg/GEG_REQUEST_INDX.php?INDX=12045'
+
+In [4]: r = requests.url(url,auth=('evc228','Whoorah4'))
+---------------------------------------------------------------------------
+AttributeError                            Traceback (most recent call last)
+<ipython-input-4-9f3b853ee31e> in <module>()
+----> 1 r = requests.url(url,auth=('evc228','Whoorah4'))
+
+AttributeError: 'module' object has no attribute 'url'
+                                          
+
+r = requests.get(url,auth=('evc228','Whoorah4')
+  File "<ipython-input-5-7cac99ecf781>", line 1
+    r = requests.url(url,auth=('evc228','Wr = requests.get(url,auth=('evc228','Whoorah4')
+                                                                           ^
+SyntaxError: invalid syntax
+
+
+In [6]: r = requests.get(url,auth=('evc228','Whoorah4'))
+
+In [7]: r.headers
+Out[7]: 
+{'content-length': '3708',
+ 'content-type': 'text/html',
+ 'date': 'Sat, 07 Dec 2013 04:14:28 GMT',
+ 'server': 'Apache/2.2.15 (Red Hat) DAV/2 mod_ssl/2.2.15 OpenSSL/1.0.0-fips Communique/4.0.11',
+ 'set-cookie': 'BIGipServerWWW-HTTP=1378527424.20480.0000; path=/',
+ 'www': 'www3'}
+
+In [8]: r.encoding
+Out[8]: 'ISO-8859-1'
+
+In [9]: r.text
+Out[9]: u'<!DOCTYPE html PUBLIC "-//W3C//Dtd XHTML 1.0 Strict//EN"\n        "http://www.w3.org/tr/xhtml1/Dtd/xhtml1-strict.dtd">\n<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">\n<head>\n\t<title>CEG REQUEST RESULTS</title>\n\t<meta name="generator" content="Bluefish 1.0.7"/>\n\t<script src="./scripts/javascript.js" type="text/javascript"></script>\n\t<link rel="stylesheet" type="text/css" href="./scripts/cas.css" />\n</head>\n<body class="INDX">\n\n\n<table>\n\n<tr><td colspan="2">\n\n<table class="MAIN">\n<tr class="INDX_HEADER"><td>Dev Of Psychoanaly Cult In Buenos Airesny&paris</td><td><a href="./GEG_REQUEST.php?TYPE=CID&SEARCH_CID=V99.9348001" target="IFrame" class="INDX">V99.9348001</a></td></tr>\n<tr class="INDX_HEADER"><td><a href="./GEG_REQUEST.php?TYPE=CSUBJ&SEARCH_CSUBJ=METR" target="IFrame" class="INDX">Metropolitan Studies</a></td><td class="INDX"><a href="./GEG_REQUEST.php?TYPE=CINSTR&SEARCH_CINSTR=Plotkin" target="IFrame" class="INDX">Plotkin</a></td></tr>\n<tr class="INDX_HEADER"><td>12 of 14 (86 %)   students responded</td><td>&nbsp;</td></tr>\n</table></td></tr>\n\n<tr><td colspan="2">&nbsp;</td></tr>\n<tr><td colspan="2">\n\n<table class="MAIN">\n<tr class="INDX_HEADER"><td>Instructor</td><td class="right">Average Result (5=Excellent, 1=Poor)</td></tr>\n<tr class="alt-a"><td>How would you rate the instructor overall?</td><td class="right">3.25</td></tr>\n<tr class="alt-b"><td>How informative were the classes?</td><td class="right">3.66</td></tr>\n<tr class="alt-a"><td>How well organized were the classes?</td><td class="right">3.25</td></tr>\n<tr class="alt-b"><td>How fair was the grading?</td><td class="right">3.33</td></tr>\n</table></td></tr>\n\n<tr><td colspan="2">&nbsp;</td></tr>\n<tr><td colspan="2">\n\n<table class="MAIN">\n<tr class="INDX_HEADER"><td>Course</td><td class="right">Average Result (5=Excellent, 1=Poor)</td></tr>\n<tr class="alt-a"><td>How would you rate this course overall?</td><td class="right">3.25</td></tr>\n<tr class="alt-b"><td>How clear were the objectives of this course?</td><td class="right">3.33</td></tr>\n<tr class="alt-a"><td>How well were these objectives achieved?</td><td class="right">3.08</td></tr>\n<tr class="alt-b"><td>How interesting was the course?</td><td class="right">3.33</td></tr>\n<tr class="alt-a"><td>To what extent were your own expectations met?</td><td class="right">2.58</td></tr>\n<tr class="INDX_HEADER"><td>&nbsp;</td><td class="right">Average Result (5=Very, 1=Not at all)</td></tr>\n<tr class="alt-a"><td>How heavy was the workload?</td><td class="right">3.16</td></tr>\n<tr class="alt-b"><td>How much did you study for this course?</td><td class="right">3.00</td></tr>\n</table></td></tr>\n\n<tr><td colspan="2">&nbsp;</td></tr>\n<tr><td colspan="2">\n\n<table class="MAIN">\n<tr class="INDX_HEADER"><td>Discussion/Recitation/Lab Section</td><td class="right">Average Result (5=Very, 1=Not at all)</td></tr>\n<tr class="alt-a"><td>How helpful was the teaching assistant?</td><td class="right">0.00</td></tr>\n<tr class="alt-b"><td>How good was the communication between the instructor and the teaching assistant?</td><td class="right">0.00</td></tr>\n<tr class="alt-a"><td>How useful was the discussion/recitation/lab in achieving the objective of this course?</td><td class="right">0.00</td></tr>\n</table></td></tr>\n\n<tr><td colspan="2">&nbsp;</td></tr>\n<tr><td colspan="2">\n\n<table class="MAIN">\n<tr class="INDX_HEADER"><td>Recommendation</td><td class="right">Yes || No</td></tr>\n<tr class="alt-a"><td>Would you recommend this instructor to a friend?</td><td class="right">7 || 5</td></tr>\n<tr class="alt-b"><td>Would you recommend this course to a friend?</td><td class="right">8 || 4</td></tr>\n</table></td></tr>\n\n</table>\n</body>\n</html>'
+
+In [10]: r.json()
+---------------------------------------------------------------------------
+TypeError                                 Traceback (most recent call last)
+<ipython-input-10-9c78734cbfe1> in <module>()
+----> 1 r.json()
+
+TypeError: 'NoneType' object is not callable
+
+In [11]: r.json
+
+In [12]: r.json()                          
+
+In [12]: r.text
+Out[12]: u'<!DOCTYPE html PUBLIC "-//W3C//Dtd XHTML 1.0 Strict//EN"\n        "http://www.w3.org/tr/xhtml1/Dtd/xhtml1-strict.dtd">\n<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">\n<head>\n\t<title>CEG REQUEST RESULTS</title>\n\t<meta name="generator" content="Bluefish 1.0.7"/>\n\t<script src="./scripts/javascript.js" type="text/javascript"></script>\n\t<link rel="stylesheet" type="text/css" href="./scripts/cas.css" />\n</head>\n<body class="INDX">\n\n\n<table>\n\n<tr><td colspan="2">\n\n<table class="MAIN">\n<tr class="INDX_HEADER"><td>Dev Of Psychoanaly Cult In Buenos Airesny&paris</td><td><a href="./GEG_REQUEST.php?TYPE=CID&SEARCH_CID=V99.9348001" target="IFrame" class="INDX">V99.9348001</a></td></tr>\n<tr class="INDX_HEADER"><td><a href="./GEG_REQUEST.php?TYPE=CSUBJ&SEARCH_CSUBJ=METR" target="IFrame" class="INDX">Metropolitan Studies</a></td><td class="INDX"><a href="./GEG_REQUEST.php?TYPE=CINSTR&SEARCH_CINSTR=Plotkin" target="IFrame" class="INDX">Plotkin</a></td></tr>\n<tr class="INDX_HEADER"><td>12 of 14 (86 %)   students responded</td><td>&nbsp;</td></tr>\n</table></td></tr>\n\n<tr><td colspan="2">&nbsp;</td></tr>\n<tr><td colspan="2">\n\n<table class="MAIN">\n<tr class="INDX_HEADER"><td>Instructor</td><td class="right">Average Result (5=Excellent, 1=Poor)</td></tr>\n<tr class="alt-a"><td>How would you rate the instructor overall?</td><td class="right">3.25</td></tr>\n<tr class="alt-b"><td>How informative were the classes?</td><td class="right">3.66</td></tr>\n<tr class="alt-a"><td>How well organized were the classes?</td><td class="right">3.25</td></tr>\n<tr class="alt-b"><td>How fair was the grading?</td><td class="right">3.33</td></tr>\n</table></td></tr>\n\n<tr><td colspan="2">&nbsp;</td></tr>\n<tr><td colspan="2">\n\n<table class="MAIN">\n<tr class="INDX_HEADER"><td>Course</td><td class="right">Average Result (5=Excellent, 1=Poor)</td></tr>\n<tr class="alt-a"><td>How would you rate this course overall?</td><td class="right">3.25</td></tr>\n<tr class="alt-b"><td>How clear were the objectives of this course?</td><td class="right">3.33</td></tr>\n<tr class="alt-a"><td>How well were these objectives achieved?</td><td class="right">3.08</td></tr>\n<tr class="alt-b"><td>How interesting was the course?</td><td class="right">3.33</td></tr>\n<tr class="alt-a"><td>To what extent were your own expectations met?</td><td class="right">2.58</td></tr>\n<tr class="INDX_HEADER"><td>&nbsp;</td><td class="right">Average Result (5=Very, 1=Not at all)</td></tr>\n<tr class="alt-a"><td>How heavy was the workload?</td><td class="right">3.16</td></tr>\n<tr class="alt-b"><td>How much did you study for this course?</td><td class="right">3.00</td></tr>\n</table></td></tr>\n\n<tr><td colspan="2">&nbsp;</td></tr>\n<tr><td colspan="2">\n\n<table class="MAIN">\n<tr class="INDX_HEADER"><td>Discussion/Recitation/Lab Section</td><td class="right">Average Result (5=Very, 1=Not at all)</td></tr>\n<tr class="alt-a"><td>How helpful was the teaching assistant?</td><td class="right">0.00</td></tr>\n<tr class="alt-b"><td>How good was the communication between the instructor and the teaching assistant?</td><td class="right">0.00</td></tr>\n<tr class="alt-a"><td>How useful was the discussion/recitation/lab in achieving the objective of this course?</td><td class="right">0.00</td></tr>\n</table></td></tr>\n\n<tr><td colspan="2">&nbsp;</td></tr>\n<tr><td colspan="2">\n\n<table class="MAIN">\n<tr class="INDX_HEADER"><td>Recommendation</td><td class="right">Yes || No</td></tr>\n<tr class="alt-a"><td>Would you recommend this instructor to a friend?</td><td class="right">7 || 5</td></tr>\n<tr class="alt-b"><td>Would you recommend this course to a friend?</td><td class="right">8 || 4</td></tr>\n</table></td></tr>\n\n</table>\n</body>\n</html>'
+
+In [13]: aa=r.text
+
+In [14]: aa
+Out[14]: u'<!DOCTYPE html PUBLIC "-//W3C//Dtd XHTML 1.0 Strict//EN"\n        "http://www.w3.org/tr/xhtml1/Dtd/xhtml1-strict.dtd">\n<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">\n<head>\n\t<title>CEG REQUEST RESULTS</title>\n\t<meta name="generator" content="Bluefish 1.0.7"/>\n\t<script src="./scripts/javascript.js" type="text/javascript"></script>\n\t<link rel="stylesheet" type="text/css" href="./scripts/cas.css" />\n</head>\n<body class="INDX">\n\n\n<table>\n\n<tr><td colspan="2">\n\n<table class="MAIN">\n<tr class="INDX_HEADER"><td>Dev Of Psychoanaly Cult In Buenos Airesny&paris</td><td><a href="./GEG_REQUEST.php?TYPE=CID&SEARCH_CID=V99.9348001" target="IFrame" class="INDX">V99.9348001</a></td></tr>\n<tr class="INDX_HEADER"><td><a href="./GEG_REQUEST.php?TYPE=CSUBJ&SEARCH_CSUBJ=METR" target="IFrame" class="INDX">Metropolitan Studies</a></td><td class="INDX"><a href="./GEG_REQUEST.php?TYPE=CINSTR&SEARCH_CINSTR=Plotkin" target="IFrame" class="INDX">Plotkin</a></td></tr>\n<tr class="INDX_HEADER"><td>12 of 14 (86 %)   students responded</td><td>&nbsp;</td></tr>\n</table></td></tr>\n\n<tr><td colspan="2">&nbsp;</td></tr>\n<tr><td colspan="2">\n\n<table class="MAIN">\n<tr class="INDX_HEADER"><td>Instructor</td><td class="right">Average Result (5=Excellent, 1=Poor)</td></tr>\n<tr class="alt-a"><td>How would you rate the instructor overall?</td><td class="right">3.25</td></tr>\n<tr class="alt-b"><td>How informative were the classes?</td><td class="right">3.66</td></tr>\n<tr class="alt-a"><td>How well organized were the classes?</td><td class="right">3.25</td></tr>\n<tr class="alt-b"><td>How fair was the grading?</td><td class="right">3.33</td></tr>\n</table></td></tr>\n\n<tr><td colspan="2">&nbsp;</td></tr>\n<tr><td colspan="2">\n\n<table class="MAIN">\n<tr class="INDX_HEADER"><td>Course</td><td class="right">Average Result (5=Excellent, 1=Poor)</td></tr>\n<tr class="alt-a"><td>How would you rate this course overall?</td><td class="right">3.25</td></tr>\n<tr class="alt-b"><td>How clear were the objectives of this course?</td><td class="right">3.33</td></tr>\n<tr class="alt-a"><td>How well were these objectives achieved?</td><td class="right">3.08</td></tr>\n<tr class="alt-b"><td>How interesting was the course?</td><td class="right">3.33</td></tr>\n<tr class="alt-a"><td>To what extent were your own expectations met?</td><td class="right">2.58</td></tr>\n<tr class="INDX_HEADER"><td>&nbsp;</td><td class="right">Average Result (5=Very, 1=Not at all)</td></tr>\n<tr class="alt-a"><td>How heavy was the workload?</td><td class="right">3.16</td></tr>\n<tr class="alt-b"><td>How much did you study for this course?</td><td class="right">3.00</td></tr>\n</table></td></tr>\n\n<tr><td colspan="2">&nbsp;</td></tr>\n<tr><td colspan="2">\n\n<table class="MAIN">\n<tr class="INDX_HEADER"><td>Discussion/Recitation/Lab Section</td><td class="right">Average Result (5=Very, 1=Not at all)</td></tr>\n<tr class="alt-a"><td>How helpful was the teaching assistant?</td><td class="right">0.00</td></tr>\n<tr class="alt-b"><td>How good was the communication between the instructor and the teaching assistant?</td><td class="right">0.00</td></tr>\n<tr class="alt-a"><td>How useful was the discussion/recitation/lab in achieving the objective of this course?</td><td class="right">0.00</td></tr>\n</table></td></tr>\n\n<tr><td colspan="2">&nbsp;</td></tr>\n<tr><td colspan="2">\n\n<table class="MAIN">\n<tr class="INDX_HEADER"><td>Recommendation</td><td class="right">Yes || No</td></tr>\n<tr class="alt-a"><td>Would you recommend this instructor to a friend?</td><td class="right">7 || 5</td></tr>\n<tr class="alt-b"><td>Would you recommend this course to a friend?</td><td class="right">8 || 4</td></tr>\n</table></td></tr>\n\n</table>\n</body>\n</html>'
